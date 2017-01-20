@@ -1,4 +1,4 @@
-FROM      ubuntu:latest
+FROM      ubuntu:15.04
 RUN       apt-get install curl -y                                                    
 RUN       mkdir /downloads                                                            
 RUN       cd /downloads                                                               
