@@ -3,7 +3,7 @@ Vagrant with docker provider. Tool can be used with docker container to run vagr
 
 How to use this image:
 
-[![asciicast](https://asciinema.org/a/d1ep6zgl9n3l4c6ire10pntto.png)](https://asciinema.org/a/d1ep6zgl9n3l4c6ire10pntto)
+[![asciicast](https://asciinema.org/a/5rhyjj4jmskforp31bd8hkoud.png)](https://asciinema.org/a/5rhyjj4jmskforp31bd8hkoud)
 
 ## Example to build ubuntu 15.04 if /Users/Shared/vagrant-dockerplugin has your Vagrantfile and Dockerfile:
 
