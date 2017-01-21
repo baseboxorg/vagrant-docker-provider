@@ -1,9 +1,11 @@
 Vagrant.configure(2) do |config|
   config.vm.provider "docker" do |d|
-    d.build_dir = "."
+    d.create_args = [ "--security-opt", "seccomp=unconfined", "--privileged" ]
+    d.image = "benjixx/vagrant-centos7"
     d.has_ssh = true
+    d.remains_running = true
   end
   config.ssh.port = 22
-  config.ssh.username = "docker3"
+  config.ssh.username = "vagrant"
   config.vm.network :forwarded_port, guest: 22, host: 1234
 end
