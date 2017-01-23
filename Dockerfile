@@ -7,3 +7,4 @@ RUN       dpkg -i vagrant_1.9.1_x86_64.deb && rm -f vagrant_1.9.1_x86_64.deb
 RUN       vagrant plugin install docker
 RUN       curl https://get.docker.com/ | sh
 RUN       apt-get autoremove
+RUN       usermod -aG docker root
