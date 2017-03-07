@@ -10,7 +10,8 @@ class ProviderSuite(unittest.TestCase):
     except subprocess.CalledProcessError, e:
       pass
     self.assertTrue(status == 0, "unable to remove test")
-
+  
+  @unittest.skip("API test good to have but unnecessary if using only command")
   def test_try_api(self):
     try:
       import docker
@@ -21,7 +22,7 @@ class ProviderSuite(unittest.TestCase):
     cmd = "docker run --net host -v /var/run/docker.sock:/var/run/docker.sock --name test kenney/vagrant-docker-provider vagrant plugin list"
     output = "error"
     try:
-        output = subprocess.check_call(cmd.split())
+        output = subprocess.check_output(cmd.split())
     except subprocess.CalledProcessError, e:
         pass
       
