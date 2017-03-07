@@ -11,8 +11,7 @@ dependencies:
 
 test:
   override:
-    - docker run --net host -v /var/run/docker.sock:/var/run/docker.sock --name test kenney/vagrant-docker-provider vagrant plugin
-    - docker ps -a
+    - py.test tests/unit/*
     
   post:
     - env
