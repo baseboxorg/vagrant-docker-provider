@@ -2,7 +2,6 @@
 machine:
   pre:
     - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
-    - pip install -U pytest
 
   services:
     - docker
@@ -13,7 +12,7 @@ dependencies:
 
 test:
   override:
-    - py.test tests/unit/*
+    - nosetests -w tests/unit/
     
   post:
     - env
