@@ -12,7 +12,7 @@ dependencies:
 
 test:
   override:
-    - nosetests -w tests/unit/
+    - nosetests -v tests/unit/*py
     
   post:
     - env
