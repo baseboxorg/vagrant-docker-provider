@@ -1,7 +1,7 @@
 Vagrant.configure(2) do |config|
   config.vm.provider "docker" do |d|
     d.create_args = [ "--security-opt", "seccomp=unconfined", "--privileged" ]
-    d.image = "baseboxorg/vagrant-centos7"
+    d.image = "benjixx/vagrant-centos7"
     d.has_ssh = true
     d.remains_running = true
   end
