@@ -1,6 +1,6 @@
 FROM      phusion/baseimage:0.10.1
 
-RUN       apt-get update && apt-get install wget bash git -y
+RUN       apt-get update && apt-get install wget bash -y
 
 #RUN       rm -f /etc/service/sshd/down && \
 #          /etc/my_init.d/00_regen_ssh_host_keys.sh
@@ -15,11 +15,11 @@ RUN       wget -qO /tmp/vagrant.deb https://releases.hashicorp.com/vagrant/2.0.3
           usermod -aG docker root && \
           vagrant version
 
-RUN       vagrant plugin install vagrant-share
+#RUN       vagrant plugin install vagrant-share
 #          vagrant plugin install vagrant-cachier
 
-Volume    /app
+#Volume    /app
 
-WORKDIR   /app
+#WORKDIR   /app
 
-CMD       "/bin/bash"
+#CMD       "/bin/bash"
